@@ -11,5 +11,9 @@
 @interface VDAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property IBOutlet NSView *cameraView;
+
+@property AVCaptureSession* captureSession;
+@property AVCaptureVideoPreviewLayer* previewLayer;
 
 @end
