@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A4FF73E189EEC4D00EEB7F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4FF73D189EEC4D00EEB7F7 /* CoreGraphics.framework */; };
+		4A4FF741189EEC7A00EEB7F7 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4FF73F189EEC7A00EEB7F7 /* CoreMedia.framework */; };
+		4A4FF742189EEC7A00EEB7F7 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4FF740189EEC7A00EEB7F7 /* CoreVideo.framework */; };
 		4A998229189ED3DF0018977C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A998228189ED3DF0018977C /* Cocoa.framework */; };
 		4A998233189ED3DF0018977C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A998231189ED3DF0018977C /* InfoPlist.strings */; };
 		4A998235189ED3DF0018977C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A998234189ED3DF0018977C /* main.m */; };
@@ -19,7 +22,6 @@
 		4A998251189ED3E00018977C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A99824F189ED3E00018977C /* InfoPlist.strings */; };
 		4A998253189ED3E00018977C /* VideoDMXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A998252189ED3E00018977C /* VideoDMXTests.m */; };
 		4A998261189ED7910018977C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A998260189ED7910018977C /* AVFoundation.framework */; };
-		4A998264189EE7220018977C /* VDVideoPreviewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A998263189EE7220018977C /* VDVideoPreviewWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A4FF73D189EEC4D00EEB7F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4A4FF73F189EEC7A00EEB7F7 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		4A4FF740189EEC7A00EEB7F7 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		4A998225189ED3DF0018977C /* VideoDMX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoDMX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A998228189ED3DF0018977C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4A99822B189ED3DF0018977C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -53,8 +58,6 @@
 		4A998250189ED3E00018977C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4A998252189ED3E00018977C /* VideoDMXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoDMXTests.m; sourceTree = "<group>"; };
 		4A998260189ED7910018977C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		4A998262189EE7220018977C /* VDVideoPreviewWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDVideoPreviewWindow.h; sourceTree = "<group>"; };
-		4A998263189EE7220018977C /* VDVideoPreviewWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDVideoPreviewWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4FF741189EEC7A00EEB7F7 /* CoreMedia.framework in Frameworks */,
+				4A4FF742189EEC7A00EEB7F7 /* CoreVideo.framework in Frameworks */,
+				4A4FF73E189EEC4D00EEB7F7 /* CoreGraphics.framework in Frameworks */,
 				4A998261189ED7910018977C /* AVFoundation.framework in Frameworks */,
 				4A998229189ED3DF0018977C /* Cocoa.framework in Frameworks */,
 			);
@@ -101,6 +107,9 @@
 		4A998227189ED3DF0018977C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A4FF73F189EEC7A00EEB7F7 /* CoreMedia.framework */,
+				4A4FF740189EEC7A00EEB7F7 /* CoreVideo.framework */,
+				4A4FF73D189EEC4D00EEB7F7 /* CoreGraphics.framework */,
 				4A998260189ED7910018977C /* AVFoundation.framework */,
 				4A998228189ED3DF0018977C /* Cocoa.framework */,
 				4A998247189ED3E00018977C /* XCTest.framework */,
@@ -125,8 +134,6 @@
 				4A99823A189ED3DF0018977C /* VDAppDelegate.h */,
 				4A99823B189ED3DF0018977C /* VDAppDelegate.m */,
 				4A99823D189ED3DF0018977C /* MainMenu.xib */,
-				4A998262189EE7220018977C /* VDVideoPreviewWindow.h */,
-				4A998263189EE7220018977C /* VDVideoPreviewWindow.m */,
 				4A998240189ED3E00018977C /* Images.xcassets */,
 				4A99822F189ED3DF0018977C /* Supporting Files */,
 			);
@@ -262,7 +269,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A998264189EE7220018977C /* VDVideoPreviewWindow.m in Sources */,
 				4A99823C189ED3DF0018977C /* VDAppDelegate.m in Sources */,
 				4A998235189ED3DF0018977C /* main.m in Sources */,
 			);
@@ -475,6 +481,7 @@
 				4A998258189ED3E00018977C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A998259189ED3E00018977C /* Build configuration list for PBXNativeTarget "VideoDMXTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +490,7 @@
 				4A99825B189ED3E00018977C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

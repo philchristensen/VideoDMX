@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface VDAppDelegate : NSObject <NSApplicationDelegate>
+@interface VDAppDelegate : NSObject <NSApplicationDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property IBOutlet NSView *cameraView;
