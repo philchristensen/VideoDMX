@@ -7,6 +7,7 @@
 //
 
 #import "VDAppDelegate.h"
+#import "VDColorButton.h"
 
 NSImage *imageFromSampleBuffer(CMSampleBufferRef sampleBuffer) {
     
@@ -102,7 +103,17 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
        fromConnection:(AVCaptureConnection *)connection {
     
     NSImage *image = imageFromSampleBuffer(sampleBuffer);
-    // Add your code here that uses the image.
+    
+    for(id view in [self.window.contentView subviews]){
+        if([view isKindOfClass:[VDColorButton class]]){
+            VDColorButton* button = (VDColorButton*)view;
+            CGPoint buttonOrigin = button.frame.origin;
+            CGPoint point = [self.window.contentView convertPoint:buttonOrigin toView:self.cameraView];
+            CGFloat x = (image.size.width * point.x) / self.cameraView.frame.size.width;
+            CGFloat y = (image.size.height * point.y) / self.cameraView.frame.size.height;
+            [button detectColorAt:CGPointMake(x,y) inImage:image];
+        }
+    }
     
 }
 

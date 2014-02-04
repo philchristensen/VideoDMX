@@ -10,6 +10,7 @@
 		4A4FF73E189EEC4D00EEB7F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4FF73D189EEC4D00EEB7F7 /* CoreGraphics.framework */; };
 		4A4FF741189EEC7A00EEB7F7 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4FF73F189EEC7A00EEB7F7 /* CoreMedia.framework */; };
 		4A4FF742189EEC7A00EEB7F7 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4FF740189EEC7A00EEB7F7 /* CoreVideo.framework */; };
+		4A4FF74518A0690300EEB7F7 /* VDColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FF74418A0690300EEB7F7 /* VDColorButton.m */; };
 		4A998229189ED3DF0018977C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A998228189ED3DF0018977C /* Cocoa.framework */; };
 		4A998233189ED3DF0018977C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A998231189ED3DF0018977C /* InfoPlist.strings */; };
 		4A998235189ED3DF0018977C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A998234189ED3DF0018977C /* main.m */; };
@@ -38,6 +39,8 @@
 		4A4FF73D189EEC4D00EEB7F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4A4FF73F189EEC7A00EEB7F7 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		4A4FF740189EEC7A00EEB7F7 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		4A4FF74318A0690300EEB7F7 /* VDColorButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDColorButton.h; sourceTree = "<group>"; };
+		4A4FF74418A0690300EEB7F7 /* VDColorButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDColorButton.m; sourceTree = "<group>"; };
 		4A998225189ED3DF0018977C /* VideoDMX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoDMX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A998228189ED3DF0018977C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4A99822B189ED3DF0018977C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -134,6 +137,8 @@
 				4A99823A189ED3DF0018977C /* VDAppDelegate.h */,
 				4A99823B189ED3DF0018977C /* VDAppDelegate.m */,
 				4A99823D189ED3DF0018977C /* MainMenu.xib */,
+				4A4FF74318A0690300EEB7F7 /* VDColorButton.h */,
+				4A4FF74418A0690300EEB7F7 /* VDColorButton.m */,
 				4A998240189ED3E00018977C /* Images.xcassets */,
 				4A99822F189ED3DF0018977C /* Supporting Files */,
 			);
@@ -271,6 +276,7 @@
 			files = (
 				4A99823C189ED3DF0018977C /* VDAppDelegate.m in Sources */,
 				4A998235189ED3DF0018977C /* main.m in Sources */,
+				4A4FF74518A0690300EEB7F7 /* VDColorButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

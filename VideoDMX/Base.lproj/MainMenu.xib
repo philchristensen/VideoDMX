@@ -659,42 +659,27 @@
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZCj-Ve-uoG">
                         <rect key="frame" x="35" y="88" width="504" height="297"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <shadow key="shadow" blurRadius="10">
-                            <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </shadow>
                     </customView>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lkj-83-d0c">
-                        <rect key="frame" x="104" y="225" width="39" height="38"/>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LDH-bg-3N6" customClass="VDColorButton">
+                        <rect key="frame" x="241" y="235" width="16" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="round" bezelStyle="circular" imagePosition="above" alignment="left" borderStyle="border" imageScaling="proportionallyDown" id="GJT-cY-drU">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="label"/>
-                        </buttonCell>
-                    </button>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Go0-iw-VTM">
-                        <rect key="frame" x="252" y="278" width="39" height="38"/>
+                    </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L5s-o6-NX4" customClass="VDColorButton">
+                        <rect key="frame" x="137" y="335" width="16" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="round" bezelStyle="circular" imagePosition="above" alignment="left" borderStyle="border" imageScaling="proportionallyDown" id="BSy-Wf-NHS">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="label"/>
-                        </buttonCell>
-                    </button>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cjd-mZ-3Df">
-                        <rect key="frame" x="351" y="136" width="39" height="38"/>
+                    </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hLF-fB-pAR" customClass="VDColorButton">
+                        <rect key="frame" x="66" y="143" width="16" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="round" bezelStyle="circular" imagePosition="above" alignment="left" borderStyle="border" imageScaling="proportionallyDown" id="k9z-uI-TPJ">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="label"/>
-                        </buttonCell>
-                    </button>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-ZL-iZ0">
-                        <rect key="frame" x="404" y="225" width="39" height="38"/>
+                    </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ewP-MF-kTE" customClass="VDColorButton">
+                        <rect key="frame" x="423" y="126" width="16" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="round" bezelStyle="circular" imagePosition="above" alignment="left" borderStyle="border" imageScaling="proportionallyDown" id="mky-Ri-SQy">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="label"/>
-                        </buttonCell>
-                    </button>
+                    </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ka-Pb-kAB" customClass="VDColorButton">
+                        <rect key="frame" x="401" y="291" width="16" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </customView>
                 </subviews>
             </view>
         </window>
