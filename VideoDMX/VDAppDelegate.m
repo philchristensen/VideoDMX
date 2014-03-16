@@ -102,7 +102,7 @@ NSImage *imageFromSampleBuffer(CMSampleBufferRef sampleBuffer) {
 didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
        fromConnection:(AVCaptureConnection *)connection {
     
-    NSImage *image = imageFromSampleBuffer(sampleBuffer);
+    NSImage* image = imageFromSampleBuffer(sampleBuffer);
     
     for(id view in [self.window.contentView subviews]){
         if([view isKindOfClass:[VDColorButton class]]){
@@ -112,6 +112,14 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
             CGFloat x = (image.size.width * point.x) / self.cameraView.frame.size.width;
             CGFloat y = (image.size.height * point.y) / self.cameraView.frame.size.height;
             [button detectColorAt:CGPointMake(x,y) inImage:image];
+            
+            if(view == self.analysisButton){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.posLabelWindow.stringValue = [NSString stringWithFormat:@"%.0f,%.0f", buttonOrigin.x, buttonOrigin.y];
+                    self.posLabelView.stringValue = [NSString stringWithFormat:@"%.0f,%.0f", point.x, point.y];
+                    self.posLabelImage.stringValue = [NSString stringWithFormat:@"%.0f,%.0f", x, y];
+                });
+            }
         }
     }
     
