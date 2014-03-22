@@ -137,11 +137,11 @@
 		4A99822E189ED3DF0018977C /* VideoDMX */ = {
 			isa = PBXGroup;
 			children = (
+				4A99823D189ED3DF0018977C /* MainMenu.xib */,
 				4A99823A189ED3DF0018977C /* VDAppDelegate.h */,
 				4A99823B189ED3DF0018977C /* VDAppDelegate.m */,
 				4A884EFA18D61E8A0084A29C /* VDCameraView.h */,
 				4A884EFB18D61E8A0084A29C /* VDCameraView.m */,
-				4A99823D189ED3DF0018977C /* MainMenu.xib */,
 				4A4FF74318A0690300EEB7F7 /* VDColorButton.h */,
 				4A4FF74418A0690300EEB7F7 /* VDColorButton.m */,
 				4A998240189ED3E00018977C /* Images.xcassets */,

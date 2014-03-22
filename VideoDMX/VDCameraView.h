@@ -8,6 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface VDCameraView : NSView
+@interface VDCameraView : NSView <AVCaptureVideoDataOutputSampleBufferDelegate>
+
+@property AVCaptureSession* captureSession;
+@property AVCaptureVideoPreviewLayer* previewLayer;
 
 @end
