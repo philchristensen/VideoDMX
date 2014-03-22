@@ -32,4 +32,20 @@
     [ovalPath stroke];
 }
 
+-(BOOL)acceptsFirstMouse:(NSEvent *)e {
+    return YES;
+}
+
+- (void)mouseDown:(NSEvent *) e {
+    self.lastDragLocation = [e locationInWindow];
+}
+
+-(void)mouseDragged:(NSEvent *)theEvent {
+    NSPoint newDragLocation = [theEvent locationInWindow];
+    NSPoint thisOrigin = [self frame].origin;
+    thisOrigin.x += (-self.lastDragLocation.x + newDragLocation.x);
+    thisOrigin.y += (-self.lastDragLocation.y + newDragLocation.y);
+    [self setFrameOrigin:thisOrigin];
+    self.lastDragLocation = newDragLocation;
+}
 @end
