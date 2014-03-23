@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "VDColorButton.h"
 
 @interface VDCameraView : NSView <AVCaptureVideoDataOutputSampleBufferDelegate>
 
@@ -14,5 +15,7 @@
 @property AVCaptureVideoPreviewLayer* previewLayer;
 
 @property NSMutableArray* controlPoints;
+
+-(void)handleSelection:(VDColorButton*)button;
 
 @end

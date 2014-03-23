@@ -7,6 +7,7 @@
 //
 
 #import "VDColorButton.h"
+#import "VDCameraView.h"
 
 @implementation VDColorButton
 
@@ -51,7 +52,7 @@
         [[NSColor whiteColor] setStroke];
     }
     else{
-        [[NSColor blackColor] setStroke];
+        [[NSColor grayColor] setStroke];
     }
     [ovalPath setLineWidth: 1];
     [ovalPath stroke];
@@ -67,6 +68,7 @@
 
 -(void)mouseDown:(NSEvent *) e {
     [[NSCursor closedHandCursor] push];
+    [self.cameraView handleSelection:self];
 }
 
 -(void)mouseDragged:(NSEvent *)event {

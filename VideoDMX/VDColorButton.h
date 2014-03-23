@@ -8,8 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class VDCameraView;
+
 @interface VDColorButton : NSView
 
+@property VDCameraView* cameraView;
 @property NSColor* currentColor;
 @property BOOL selected;
 

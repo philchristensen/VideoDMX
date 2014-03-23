@@ -98,6 +98,7 @@ NSImage *imageFromSampleBuffer(CMSampleBufferRef sampleBuffer) {
     
     for(VDColorButton* button in self.controlPoints){
         [button setWantsLayer:YES];
+        [button setCameraView:self];
         [self addSubview:button];
     }
 
@@ -114,22 +115,34 @@ NSImage *imageFromSampleBuffer(CMSampleBufferRef sampleBuffer) {
 - (void)captureOutput:(AVCaptureOutput *)captureOutput
 didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
        fromConnection:(AVCaptureConnection *)connection {
-    
-    NSImage* image = imageFromSampleBuffer(sampleBuffer);
-    for(id view in [self subviews]){
-        if([view isKindOfClass:[VDColorButton class]]){
-            VDColorButton* button = (VDColorButton*)view;
-            CGPoint buttonOrigin = button.frame.origin;
-            CGPoint point = [self convertPoint:buttonOrigin toView:self];
-            CGFloat x = (image.size.width * point.x) / self.frame.size.width;
-            CGFloat y = (image.size.height * point.y) / self.frame.size.height;
-            [button detectColorAt:CGPointMake(x,y) inImage:image];
+    @autoreleasepool {
+        NSImage* image = imageFromSampleBuffer(sampleBuffer);
+        for(id view in [self subviews]){
+            if([view isKindOfClass:[VDColorButton class]]){
+                VDColorButton* button = (VDColorButton*)view;
+                CGPoint buttonOrigin = button.frame.origin;
+                CGPoint point = [self convertPoint:buttonOrigin toView:self];
+                CGFloat x = (image.size.width * point.x) / self.frame.size.width;
+                CGFloat y = (image.size.height * point.y) / self.frame.size.height;
+                [button detectColorAt:CGPointMake(x,y) inImage:image];
+            }
         }
     }
 }
 
 -(BOOL)isFlipped {
     return YES;
+}
+
+-(void)handleSelection:(VDColorButton *)selectedButton {
+    for(VDColorButton* button in self.controlPoints){
+        if(button.selected){
+            button.selected = NO;
+            [button setNeedsDisplay:YES];
+        }
+    }
+    selectedButton.selected = YES;
+    [selectedButton setNeedsDisplay:YES];
 }
 
 @end
