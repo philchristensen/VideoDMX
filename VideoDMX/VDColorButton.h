@@ -11,8 +11,7 @@
 @interface VDColorButton : NSView
 
 @property NSColor* currentColor;
-@property NSPoint lastDragLocation;
-@property BOOL dragging;
+@property BOOL selected;
 
 -(void)detectColorAt:(CGPoint)point inImage:(NSImage*)image;
 

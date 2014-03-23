@@ -59,6 +59,14 @@ NSImage *imageFromSampleBuffer(CMSampleBufferRef sampleBuffer) {
 @implementation VDCameraView
 
 -(void)awakeFromNib {
+    self.controlPoints = [NSMutableArray arrayWithArray:@[]];
+    [self.controlPoints addObject:[[VDColorButton alloc] initWithFrame:NSMakeRect(86,250,32,32)]];
+    [self.controlPoints addObject:[[VDColorButton alloc] initWithFrame:NSMakeRect(53,146,32,32)]];
+    [self.controlPoints addObject:[[VDColorButton alloc] initWithFrame:NSMakeRect(243,171,32,32)]];
+    [self.controlPoints addObject:[[VDColorButton alloc] initWithFrame:NSMakeRect(236,62,32,32)]];
+    [self.controlPoints addObject:[[VDColorButton alloc] initWithFrame:NSMakeRect(357,217,32,32)]];
+    [self.controlPoints addObject:[[VDColorButton alloc] initWithFrame:NSMakeRect(403,103,32,32)]];
+    
     self.captureSession = [[AVCaptureSession alloc] init];
     self.captureSession.sessionPreset = AVCaptureSessionPresetMedium;
     
@@ -86,7 +94,13 @@ NSImage *imageFromSampleBuffer(CMSampleBufferRef sampleBuffer) {
     self.previewLayer.masksToBounds = YES;
     
     [self.layer addSublayer:self.previewLayer];
+    [self setWantsLayer:YES];
     
+    for(VDColorButton* button in self.controlPoints){
+        [button setWantsLayer:YES];
+        [self addSubview:button];
+    }
+
     
     AVCaptureVideoDataOutput *output = [[AVCaptureVideoDataOutput alloc] init];
     [self.captureSession addOutput:output];
@@ -102,18 +116,16 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
        fromConnection:(AVCaptureConnection *)connection {
     
     NSImage* image = imageFromSampleBuffer(sampleBuffer);
-    
-    for(id view in [self.window.contentView subviews]){
+    for(id view in [self subviews]){
         if([view isKindOfClass:[VDColorButton class]]){
             VDColorButton* button = (VDColorButton*)view;
             CGPoint buttonOrigin = button.frame.origin;
-            CGPoint point = [self.window.contentView convertPoint:buttonOrigin toView:self];
+            CGPoint point = [self convertPoint:buttonOrigin toView:self];
             CGFloat x = (image.size.width * point.x) / self.frame.size.width;
             CGFloat y = (image.size.height * point.y) / self.frame.size.height;
             [button detectColorAt:CGPointMake(x,y) inImage:image];
         }
     }
-    
 }
 
 -(BOOL)isFlipped {

@@ -24,6 +24,8 @@
 		4A998251189ED3E00018977C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A99824F189ED3E00018977C /* InfoPlist.strings */; };
 		4A998253189ED3E00018977C /* VideoDMXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A998252189ED3E00018977C /* VideoDMXTests.m */; };
 		4A998261189ED7910018977C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A998260189ED7910018977C /* AVFoundation.framework */; };
+		4AB7C2DA18DF3E370072ADBF /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AB7C2D918DF3E370072ADBF /* add.png */; };
+		4AB7C2DE18DF3F5E0072ADBF /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AB7C2DD18DF3F5D0072ADBF /* camera.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		4A998250189ED3E00018977C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4A998252189ED3E00018977C /* VideoDMXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoDMXTests.m; sourceTree = "<group>"; };
 		4A998260189ED7910018977C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4AB7C2D918DF3E370072ADBF /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		4AB7C2DD18DF3F5D0072ADBF /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 		4A99822F189ED3DF0018977C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4AB7C2D918DF3E370072ADBF /* add.png */,
+				4AB7C2DD18DF3F5D0072ADBF /* camera.png */,
 				4A998230189ED3DF0018977C /* VideoDMX-Info.plist */,
 				4A998231189ED3DF0018977C /* InfoPlist.strings */,
 				4A998234189ED3DF0018977C /* main.m */,
@@ -260,6 +266,8 @@
 				4A998233189ED3DF0018977C /* InfoPlist.strings in Resources */,
 				4A998241189ED3E00018977C /* Images.xcassets in Resources */,
 				4A998239189ED3DF0018977C /* Credits.rtf in Resources */,
+				4AB7C2DA18DF3E370072ADBF /* add.png in Resources */,
+				4AB7C2DE18DF3F5E0072ADBF /* camera.png in Resources */,
 				4A99823F189ED3DF0018977C /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

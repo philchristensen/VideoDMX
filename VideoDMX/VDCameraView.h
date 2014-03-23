@@ -13,4 +13,6 @@
 @property AVCaptureSession* captureSession;
 @property AVCaptureVideoPreviewLayer* previewLayer;
 
+@property NSMutableArray* controlPoints;
+
 @end

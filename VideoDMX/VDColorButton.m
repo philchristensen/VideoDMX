@@ -10,6 +10,10 @@
 
 @implementation VDColorButton
 
+-(void)awakeFromNib {
+    self.selected = NO;
+}
+
 -(void)detectColorAt:(CGPoint)point inImage:(NSImage*)image {
     NSBitmapImageRep* raw_img = [NSBitmapImageRep imageRepWithData:[image TIFFRepresentation]];
     self.currentColor = [raw_img colorAtX:point.x y:point.y];
@@ -24,10 +28,31 @@
 }
 
 -(void)drawRect:(NSRect)dirtyRect {
-    NSBezierPath* ovalPath = [NSBezierPath bezierPathWithOvalInRect: NSMakeRect(0.5, 0.5, 15, 15)];
+    //// Color Declarations
+    NSColor* glowColor = [NSColor colorWithCalibratedRed: 0.987 green: 0.987 blue: 0.575 alpha: 1];
+    
+    //// Shadow Declarations
+    NSShadow* glow = [[NSShadow alloc] init];
+    [glow setShadowColor: glowColor];
+    [glow setShadowOffset: NSMakeSize(0.1, 0.1)];
+    [glow setShadowBlurRadius: 8];
+    
+    //// Oval Drawing
+    NSBezierPath* ovalPath = [NSBezierPath bezierPathWithOvalInRect: NSMakeRect(5.5, 5.5, 21, 21)];
+    [NSGraphicsContext saveGraphicsState];
+    if(self.selected){
+        [glow set];
+    }
     [self.currentColor setFill];
     [ovalPath fill];
-    [[NSColor blackColor] setStroke];
+    [NSGraphicsContext restoreGraphicsState];
+    
+    if(self.selected){
+        [[NSColor whiteColor] setStroke];
+    }
+    else{
+        [[NSColor blackColor] setStroke];
+    }
     [ovalPath setLineWidth: 1];
     [ovalPath stroke];
 }
@@ -42,13 +67,12 @@
 
 -(void)mouseDown:(NSEvent *) e {
     [[NSCursor closedHandCursor] push];
-    self.lastDragLocation = [e locationInWindow];
 }
 
 -(void)mouseDragged:(NSEvent *)event {
     NSView* superView = [self superview];
-    NSPoint currentOrigin = self.lastDragLocation;
     NSRect currentFrame = [self frame];
+    NSPoint currentOrigin = currentFrame.origin;
     NSPoint nextOrigin = NSMakePoint(currentOrigin.x + [event deltaX],
                                      currentOrigin.y + ([event deltaY] *
                                                         ([superView isFlipped] ? 1 : -1))
@@ -56,8 +80,6 @@
     [self setFrameOrigin:nextOrigin];
     [self autoscroll:event];
     [superView setNeedsDisplayInRect:NSUnionRect(currentFrame, [self frame])];
-    
-    self.lastDragLocation = nextOrigin;
 }
 
 -(void)mouseUp:(NSEvent*)event {

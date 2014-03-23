@@ -660,40 +660,90 @@
                         <rect key="frame" x="20" y="226" width="504" height="297"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
-                    <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L5s-o6-NX4" customClass="VDColorButton">
-                        <rect key="frame" x="102" y="460" width="16" height="16"/>
+                    <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hX-Z8-XYN">
+                        <rect key="frame" x="20" y="20" width="504" height="198"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    </customView>
-                    <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yM2-Jb-fXd" customClass="VDColorButton">
-                        <rect key="frame" x="252" y="272" width="16" height="16"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    </customView>
-                    <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Rq-m4-zdP" customClass="VDColorButton">
-                        <rect key="frame" x="419" y="313" width="16" height="16"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    </customView>
-                    <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g40-bc-VTF" customClass="VDColorButton">
-                        <rect key="frame" x="69" y="356" width="16" height="16"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    </customView>
-                    <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JIi-zm-FX4" customClass="VDColorButton">
-                        <rect key="frame" x="259" y="381" width="16" height="16"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    </customView>
-                    <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v1P-bb-YGA" customClass="VDColorButton">
-                        <rect key="frame" x="373" y="427" width="16" height="16"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    </customView>
+                        <clipView key="contentView" ambiguous="YES" misplaced="YES" id="R3U-6d-kdm">
+                            <rect key="frame" x="1" y="17" width="502" height="180"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="GWS-xU-1vi" id="Liw-yK-L4w">
+                                    <rect key="frame" x="0.0" y="0.0" width="502" height="180"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <size key="intercellSpacing" width="3" height="2"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                    <tableColumns>
+                                        <tableColumn width="116" minWidth="40" maxWidth="1000" id="HAt-Un-PBw">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="hMJ-Gb-inu">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        </tableColumn>
+                                        <tableColumn width="380" minWidth="40" maxWidth="1000" id="r0S-i6-8p1">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="MM4-SR-wOk">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        </tableColumn>
+                                    </tableColumns>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" id="irx-To-Zk7">
+                            <rect key="frame" x="-7" y="2" width="0.0" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="37" id="CgM-Tn-kq9">
+                            <rect key="frame" x="-14" y="9" width="15" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <tableHeaderView key="headerView" id="GWS-xU-1vi">
+                            <rect key="frame" x="0.0" y="0.0" width="502" height="17"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </tableHeaderView>
+                    </scrollView>
                 </subviews>
             </view>
+            <toolbar key="toolbar" implicitIdentifier="C742B411-18DC-47CB-B1F2-D8067AB4F846" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="2Dj-wv-Zd0">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="C1CC5171-5732-42AC-8EE9-B7194E2FA5F4" label="Add Fixture" paletteLabel="Add Fixture" tag="-1" image="add" id="oN3-eN-U1D"/>
+                    <toolbarItem implicitItemIdentifier="E96BF180-7CCE-4EB8-B7AC-9BF4FD4BFF69" label="Select Camera" paletteLabel="Select Camera" tag="-1" image="camera" id="0iw-W3-jVn"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="eDB-nm-Jb6"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="6ap-qV-nLY"/>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="oN3-eN-U1D"/>
+                    <toolbarItem reference="6ap-qV-nLY"/>
+                    <toolbarItem reference="0iw-W3-jVn"/>
+                </defaultToolbarItems>
+            </toolbar>
         </window>
         <customObject id="494" customClass="VDAppDelegate">
             <connections>
-                <outlet property="analysisButton" destination="L5s-o6-NX4" id="Rv3-aA-WdK"/>
                 <outlet property="cameraView" destination="ZCj-Ve-uoG" id="5SE-pf-ayf"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
     </objects>
+    <resources>
+        <image name="add" width="512" height="512"/>
+        <image name="camera" width="208" height="208"/>
+    </resources>
 </document>
