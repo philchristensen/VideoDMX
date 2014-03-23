@@ -650,38 +650,38 @@
         <window title="VideoDMX" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="702" height="543"/>
+            <rect key="contentRect" x="335" y="390" width="544" height="543"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" wantsLayer="YES" id="372">
-                <rect key="frame" x="0.0" y="0.0" width="702" height="543"/>
+                <rect key="frame" x="0.0" y="0.0" width="544" height="543"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZCj-Ve-uoG" customClass="VDCameraView">
-                        <rect key="frame" x="99" y="123" width="504" height="297"/>
+                        <rect key="frame" x="20" y="226" width="504" height="297"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                     <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L5s-o6-NX4" customClass="VDColorButton">
-                        <rect key="frame" x="201" y="370" width="16" height="16"/>
+                        <rect key="frame" x="102" y="460" width="16" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                     <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yM2-Jb-fXd" customClass="VDColorButton">
-                        <rect key="frame" x="351" y="182" width="16" height="16"/>
+                        <rect key="frame" x="252" y="272" width="16" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                     <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Rq-m4-zdP" customClass="VDColorButton">
-                        <rect key="frame" x="518" y="223" width="16" height="16"/>
+                        <rect key="frame" x="419" y="313" width="16" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                     <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g40-bc-VTF" customClass="VDColorButton">
-                        <rect key="frame" x="168" y="266" width="16" height="16"/>
+                        <rect key="frame" x="69" y="356" width="16" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                     <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JIi-zm-FX4" customClass="VDColorButton">
-                        <rect key="frame" x="358" y="291" width="16" height="16"/>
+                        <rect key="frame" x="259" y="381" width="16" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                     <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v1P-bb-YGA" customClass="VDColorButton">
-                        <rect key="frame" x="472" y="337" width="16" height="16"/>
+                        <rect key="frame" x="373" y="427" width="16" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                 </subviews>
