@@ -67,6 +67,12 @@ NSImage *imageFromSampleBuffer(CMSampleBufferRef sampleBuffer) {
     [self.controlPoints addObject:[[VDColorButton alloc] initWithFrame:NSMakeRect(357,217,32,32)]];
     [self.controlPoints addObject:[[VDColorButton alloc] initWithFrame:NSMakeRect(403,103,32,32)]];
     
+    self.selectedPointInfo = @[
+                               @{@"name": @"test", @"value": @"value2"},
+                               @{@"name": @"test", @"value": @"value2"},
+                               @{@"name": @"test", @"value": @"value2"}
+                               ];
+    
     self.captureSession = [[AVCaptureSession alloc] init];
     self.captureSession.sessionPreset = AVCaptureSessionPresetMedium;
     
@@ -143,6 +149,23 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     }
     selectedButton.selected = YES;
     [selectedButton setNeedsDisplay:YES];
+}
+
+-(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    return [self.selectedPointInfo count];
+}
+
+- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)index {
+    NSDictionary* keyValue = self.selectedPointInfo[index];
+    NSString* contentString = keyValue[tableColumn.identifier];
+    NSTextField *result = [tableView makeViewWithIdentifier:@"MyView" owner:self];
+    if (result == nil) {
+        // Note that the height of the frame is not really relevant, because the row height will modify the height.
+        result = [[NSTextField alloc] initWithFrame:NSMakeRect(0,0,tableColumn.width,34)];
+        result.identifier = @"MyView";
+    }
+    result.stringValue = contentString;
+    return result;
 }
 
 @end

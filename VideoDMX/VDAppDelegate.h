@@ -7,13 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "VDColorButton.h"
-#import "VDCameraView.h"
 
 @interface VDAppDelegate : NSObject <NSApplicationDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-
-@property IBOutlet VDCameraView* cameraView;
 
 @end
