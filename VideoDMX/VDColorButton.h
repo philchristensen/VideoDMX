@@ -12,6 +12,7 @@
 
 @property NSColor* currentColor;
 @property NSPoint lastDragLocation;
+@property BOOL dragging;
 
 -(void)detectColorAt:(CGPoint)point inImage:(NSImage*)image;
 

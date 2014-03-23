@@ -32,20 +32,37 @@
     [ovalPath stroke];
 }
 
--(BOOL)acceptsFirstMouse:(NSEvent *)e {
+-(BOOL)isFlipped {
     return YES;
 }
 
-- (void)mouseDown:(NSEvent *) e {
+-(BOOL)acceptsFirstResponder{
+    return YES;
+}
+
+-(void)mouseDown:(NSEvent *) e {
+    [[NSCursor closedHandCursor] push];
     self.lastDragLocation = [e locationInWindow];
 }
 
--(void)mouseDragged:(NSEvent *)theEvent {
-    NSPoint newDragLocation = [theEvent locationInWindow];
-    NSPoint thisOrigin = [self frame].origin;
-    thisOrigin.x += (-self.lastDragLocation.x + newDragLocation.x);
-    thisOrigin.y += (-self.lastDragLocation.y + newDragLocation.y);
-    [self setFrameOrigin:thisOrigin];
-    self.lastDragLocation = newDragLocation;
+-(void)mouseDragged:(NSEvent *)event {
+    NSView* superView = [self superview];
+    NSPoint currentOrigin = self.lastDragLocation;
+    NSRect currentFrame = [self frame];
+    NSPoint nextOrigin = NSMakePoint(currentOrigin.x + [event deltaX],
+                                     currentOrigin.y + ([event deltaY] *
+                                                        ([superView isFlipped] ? 1 : -1))
+                                     );
+    [self setFrameOrigin:nextOrigin];
+    [self autoscroll:event];
+    [superView setNeedsDisplayInRect:NSUnionRect(currentFrame, [self frame])];
+    
+    self.lastDragLocation = nextOrigin;
 }
+
+-(void)mouseUp:(NSEvent*)event {
+    [NSCursor pop];
+    [[self window] invalidateCursorRectsForView:self];
+}
+
 @end
